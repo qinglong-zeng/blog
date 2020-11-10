@@ -1,7 +1,8 @@
 module.exports = {
-  title: 'VuePress Blog Example',
-  description: 'A blog powered by VuePress',
-  theme: '@vuepress/theme-blog', // OR shortcut: @vuepress/blog
+  title: "前端技术博客",
+  description: "This is my blog built by VuePress",
+  theme: "@vuepress/theme-blog", // OR shortcut: @vuepress/blog
+  base: "/blog/",
   themeConfig: {
     /**
      * Ref: https://vuepress-theme-blog.ulivz.com/config/#dateformat
@@ -31,19 +32,19 @@ module.exports = {
       contact: [
         {
           type: "github",
-          link: "https://github.com/newsbielt703"
+          link: "https://github.com/newsbielt703",
         },
         {
           type: "mail",
-          link: "mailto:newsbielt703@gmail.com"
-        }
+          link: "mailto:newsbielt703@gmail.com",
+        },
       ],
       copyright: [
         {
           text: "Billy Chin © 2020",
-          link: ""
-        }
-      ]
+          link: "",
+        },
+      ],
     },
     /**
      * Ref: https://vuepress-theme-blog.ulivz.com/config/#directories
