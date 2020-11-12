@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>JS/jQuery宽高的理解和应用 | 前端技术博客</title>
+    <meta name="generator" content="VuePress 1.6.0">
+    
+    <meta name="description" content="
+window方向
+
+outerHeight 浏览器外部高度
+
+outerWidth 浏览器外部宽度
+
+innerHeight 浏览器内部高度
+
+innerWidth 浏览器内部宽度
+
+outer、inner相关属性不兼容ie9以下的浏览器
+
+screen属性
+screenTop浏览器距离顶部的高度
+
+screenLeft浏览器距离左边的宽度
+
+screen的width、heigh ...">
+    <link rel="preload" href="/blog/assets/css/0.styles.4f7a427a.css" as="style"><link rel="preload" href="/blog/assets/js/app.4b6fc9d0.js" as="script"><link rel="preload" href="/blog/assets/js/6.743e9d74.js" as="script"><link rel="preload" href="/blog/assets/js/3.c32d983c.js" as="script"><link rel="preload" href="/blog/assets/js/16.eaf021e3.js" as="script"><link rel="prefetch" href="/blog/assets/js/10.69f07e0e.js"><link rel="prefetch" href="/blog/assets/js/11.53f87820.js"><link rel="prefetch" href="/blog/assets/js/12.2a2178d6.js"><link rel="prefetch" href="/blog/assets/js/13.92d67802.js"><link rel="prefetch" href="/blog/assets/js/14.c5187f8e.js"><link rel="prefetch" href="/blog/assets/js/15.ae459079.js"><link rel="prefetch" href="/blog/assets/js/17.9b644ba2.js"><link rel="prefetch" href="/blog/assets/js/18.1e736c80.js"><link rel="prefetch" href="/blog/assets/js/19.35159f96.js"><link rel="prefetch" href="/blog/assets/js/20.7852a83e.js"><link rel="prefetch" href="/blog/assets/js/21.92fa7312.js"><link rel="prefetch" href="/blog/assets/js/22.e9e7a521.js"><link rel="prefetch" href="/blog/assets/js/23.b724ea7b.js"><link rel="prefetch" href="/blog/assets/js/24.aaa1308f.js"><link rel="prefetch" href="/blog/assets/js/25.a618dc0d.js"><link rel="prefetch" href="/blog/assets/js/26.c4c3d5e4.js"><link rel="prefetch" href="/blog/assets/js/27.e5199e5d.js"><link rel="prefetch" href="/blog/assets/js/28.a379a686.js"><link rel="prefetch" href="/blog/assets/js/29.c2715027.js"><link rel="prefetch" href="/blog/assets/js/4.00b7630e.js"><link rel="prefetch" href="/blog/assets/js/5.631f1efc.js"><link rel="prefetch" href="/blog/assets/js/7.a54a7d27.js"><link rel="prefetch" href="/blog/assets/js/8.bde22fe0.js"><link rel="prefetch" href="/blog/assets/js/9.ce3d6c06.js"><link rel="prefetch" href="/blog/assets/js/vuejs-paginate.c82c253b.js">
+    <link rel="stylesheet" href="/blog/assets/css/0.styles.4f7a427a.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div id="vuepress-theme-blog__global-layout"><section id="header-wrapper"><header id="header"><div class="header-wrapper"><div class="title"><a href="/blog/" class="nav-link home-link">前端技术博客 </a></div> <div class="header-right-wrap"><ul class="nav"><li class="nav-item"><a href="/blog/" class="nav-link">Blog</a></li><li class="nav-item"><a href="/blog/tag/" class="nav-link">Tags</a></li></ul> <div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></div></header></section> <div id="mobile-header"><div class="mobile-header-bar"><div class="mobile-header-title"><a href="/blog/" class="nav-link mobile-home-link">前端技术博客 </a> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></div> <div class="mobile-menu-wrapper"><hr class="menu-divider"> <ul class="mobile-nav"><li class="mobile-nav-item"><a href="/blog/" class="nav-link">Blog</a></li><li class="mobile-nav-item"><a href="/blog/tag/" class="nav-link">Tags</a></li> <li class="mobile-nav-item"><!----></li></ul></div></div></div> <div class="content-wrapper"><div id="vuepress-theme-blog__post-layout"><article itemscope="itemscope" itemtype="https://schema.org/BlogPosting" class="vuepress-blog-theme-content"><header><h1 itemprop="name headline" class="post-title">
+        
+      </h1> <div class="post-meta"><div itemprop="publisher author" itemtype="http://schema.org/Person" itemscope="itemscope" class="post-meta-author"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-navigation"><polygon points="3 11 22 2 13 21 11 13 3 11"></polygon></svg> <span itemprop="name">Kimlon.zeng</span> <span itemprop="address">   in Shenzhen</span></div> <div class="post-meta-date"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg> <time pubdate itemprop="datePublished" datetime="2019-11-19T00:00:00.000Z">
+      Tue Nov 19 2019
+    </time></div> <!----></div></header> <div itemprop="articleBody" class="content__default"><h1 id="js-jquery宽高的理解和应用"><a href="#js-jquery宽高的理解和应用" class="header-anchor">#</a> JS/jQuery宽高的理解和应用</h1> <h2 id="window方向"><a href="#window方向" class="header-anchor">#</a> window方向</h2> <p>outerHeight 浏览器外部高度</p> <p>outerWidth 浏览器外部宽度</p> <p>innerHeight 浏览器内部高度</p> <p>innerWidth 浏览器内部宽度</p> <p>outer、inner相关属性不兼容ie9以下的浏览器</p> <h3 id="screen属性"><a href="#screen属性" class="header-anchor">#</a> screen属性</h3> <p>screenTop浏览器距离顶部的高度</p> <p>screenLeft浏览器距离左边的宽度</p> <p>screen的width、height、availHeight、availWidth是固定不变的 跟屏幕相关。</p> <h2 id="doucument方向"><a href="#doucument方向" class="header-anchor">#</a> doucument方向</h2> <h3 id="client-该属性指的是元素可视区域宽高、即padding-content。如果没有滚动条-即为元素设置的高度和宽度-如果出现滚动条-滚动条会覆盖元素的宽度和高度-那么该属性就是其本来宽高减去滚动条宽高。"><a href="#client-该属性指的是元素可视区域宽高、即padding-content。如果没有滚动条-即为元素设置的高度和宽度-如果出现滚动条-滚动条会覆盖元素的宽度和高度-那么该属性就是其本来宽高减去滚动条宽高。" class="header-anchor">#</a> client 该属性指的是元素可视区域宽高、即padding+content。如果没有滚动条，即为元素设置的高度和宽度，如果出现滚动条，滚动条会覆盖元素的宽度和高度，那么该属性就是其本来宽高减去滚动条宽高。</h3> <div class="language- extra-class"><pre class="language-text"><code>document.body.clientWidth
+document.body.clientHeight
+clientWidth=style.width+style.padding*2-滚动轴
+
+clientTop === border-top 的 border-width // true
+clientLeft === border-left 的 border-width // true
+</code></pre></div><h2 id="offset方向"><a href="#offset方向" class="header-anchor">#</a> offset方向</h2> <div class="language- extra-class"><pre class="language-text"><code>offsetWidth、offsetHeight这一对属性指的元素的border + padding + content宽度和高度。
+假如无padding 无滚动 无border
+offsetWidth = clientWidth = width
+假如有paddding 无滚动 有border
+offsetWidth = style.width+padding2+border2
+offsetWidth = clientWidth+border*2
+假如有padding 有滚动且滚动条显示，有border
+offsetWidth = style.width+padding2+border2
+offsetWidth = clientWidth+滚动轴宽度+border*2
+
+offsetParent
+如果当前元素的父元素没有进行css定位（position为absolute和relative）,offsetParent为body。
+如果当前元素的父元素有进行css定位（position为absolute和relative）,offsetParent取最近的那个父元素。
+
+**在ie6/7中
+offsetLeft = offsetParent的padding-left + 当前元素的padding-left
+
+在ie8/9/10 chorm
+offsetLeft =offsetParent的margin-left +offsetParent的border宽度+ offsetParent的padding-left + 当前元素的padding-left
+
+在ff中
+offsetLeft = offsetParent的margin-left + offsetParent的padding-left + 当前元素的padding-left**```
+
+
+## scroll方向
+
+### document.body
+```doucument.body的scrollWidth和scrollHeight与div中的scrollWidth和scrollHeight是有区别的
+
+1给定宽高小于浏览器窗口时
+scrollWidth通常等于浏览器宽度
+scrollHeight通常等于浏览器高度
+
+2给定宽高大于浏览器宽窗口，且内容小于给定宽高
+scrollWidth通常等于其所有padding+margin+border+width
+scrollHeight通常等于其所有padding+margin+border+height**
+
+3给定宽高大于浏览器宽窗口，且内容大于给定宽高
+scrollWidth通常等于其内容宽度+其padding+margin+border
+scrollHeight通常等于其内容高度+其padding+margin+border
+
+在某div中scrollWidth和scrollHeight
+无滚动轴时
+scrollWidth = clientWidth = width + padding2
+有滚动轴时
+scrollWidth = 实际内容宽度 + padding2
+scrollHeight = 实际内容高度 + padding*2
+
+scrollLeft scrollTop 属性可以读写 指的是当前元素中内容超出其宽高的时候，元素被卷起的高度和宽度。```
+</code></pre></div></div> <footer><!----> <hr> <!----></footer></article> <div class="sticker vuepress-toc"><div class="vuepress-toc-item vuepress-toc-h2 active"><a href="#window方向" title="window方向">window方向</a></div><div class="vuepress-toc-item vuepress-toc-h3"><a href="#screen属性" title="screen属性">screen属性</a></div><div class="vuepress-toc-item vuepress-toc-h2"><a href="#doucument方向" title="doucument方向">doucument方向</a></div><div class="vuepress-toc-item vuepress-toc-h3"><a href="#client-该属性指的是元素可视区域宽高、即padding-content。如果没有滚动条-即为元素设置的高度和宽度-如果出现滚动条-滚动条会覆盖元素的宽度和高度-那么该属性就是其本来宽高减去滚动条宽高。" title="client 该属性指的是元素可视区域宽高、即padding+content。如果没有滚动条，即为元素设置的高度和宽度，如果出现滚动条，滚动条会覆盖元素的宽度和高度，那么该属性就是其本来宽高减去滚动条宽高。">client 该属性指的是元素可视区域宽高、即padding+content。如果没有滚动条，即为元素设置的高度和宽度，如果出现滚动条，滚动条会覆盖元素的宽度和高度，那么该属性就是其本来宽高减去滚动条宽高。</a></div><div class="vuepress-toc-item vuepress-toc-h2"><a href="#offset方向" title="offset方向">offset方向</a></div></div></div></div> <footer class="footer" data-v-fdbf4940><div class="footer-left-wrap" data-v-fdbf4940><ul class="contact" data-v-fdbf4940><li class="contact-item" data-v-fdbf4940><a href="https://github.com/qinglong-zeng" target="_blank" rel="noopener noreferrer" class="nav-link external" data-v-fdbf4940><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github" data-v-fdbf4940><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" data-v-fdbf4940></path></svg>
+          
+        </a></li><li class="contact-item" data-v-fdbf4940><a href="mailto:g1780374757@gmail.com" class="nav-link external" data-v-fdbf4940><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-mail" data-v-fdbf4940><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" data-v-fdbf4940></path><polyline points="22,6 12,13 2,6" data-v-fdbf4940></polyline></svg>
+          
+        </a></li></ul></div> <div class="footer-right-wrap" data-v-fdbf4940><ul class="copyright" data-v-fdbf4940><li class="copyright-item" data-v-fdbf4940><a href="/blog/2019/11/19/jquery-window-height/.html" class="nav-link" data-v-fdbf4940>Qinglong Zeng © 2020</a></li></ul></div></footer></div><div class="global-ui"></div></div>
+    <script src="/blog/assets/js/app.4b6fc9d0.js" defer></script><script src="/blog/assets/js/6.743e9d74.js" defer></script><script src="/blog/assets/js/3.c32d983c.js" defer></script><script src="/blog/assets/js/16.eaf021e3.js" defer></script>
+  </body>
+</html>
